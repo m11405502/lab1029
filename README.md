@@ -2,105 +2,105 @@
 
 graph TD
 
-&nbsp;   %% === User Roles ===
+  %% === User Roles ===
 
-&nbsp;   GC(\[General Contractor 👷])
+  GC(\[General Contractor 👷])
 
-&nbsp;   SUP(\[Supplier 🏭])
-
-
-
-&nbsp;   %% === System Boundary ===
-
-&nbsp;   subgraph System \[🌐 VITA Platform]
-
-&nbsp;       direction TB
+  SUP(\[Supplier 🏭])
 
 
 
-&nbsp;       %% === Level 1 - Core Screens ===
+  %% === System Boundary ===
 
-&nbsp;       SCR1(\[🏠 Homepage])
+  subgraph System \[🌐 VITA Platform]
 
-&nbsp;       SCR2(\[🔐 Login / Register])
-
-&nbsp;       SCR3(\[📦 Orders Dashboard])
-
-&nbsp;       SCR4(\[🔎 Supplier Directory])
-
-&nbsp;       SCR5(\[💬 Messaging ])
-
-&nbsp;       SCR6(\[👤 Profile ])
-
-&nbsp;       SCR7(\[🔔 Notifications ])
-
-&nbsp;       SCR8(\[📊 Reports])
-
-&nbsp;       SCR9(\[💳 Payments])
-
-&nbsp;       SCR10(\[📰 Blog])
+      direction TB
 
 
 
-&nbsp;       %% === Level 2 - Subscreens / Components ===
+      %% === Level 1 - Core Screens ===
 
-&nbsp;       subgraph Subscreens \[ ]
+      SCR1(\[🏠 Homepage])
 
-&nbsp;           direction TB
+      SCR2(\[🔐 Login / Register])
 
-&nbsp;           SUB1(\[🧾 Order Details ])
+      SCR3(\[📦 Orders Dashboard])
 
-&nbsp;           SUB2(\[📝 New Order Form ])
+      SCR4(\[🔎 Supplier Directory])
 
-&nbsp;           SUB3(\[📬 Message Thread ])
+      SCR5(\[💬 Messaging ])
 
-&nbsp;           SUB4(\[⚙️ Edit Profile ])
+      SCR6(\[👤 Profile ])
 
-&nbsp;           SUB5(\[🏗️ Supplier Details ])
+      SCR7(\[🔔 Notifications ])
 
-&nbsp;       end
+      SCR8(\[📊 Reports])
 
-&nbsp;   end
+      SCR9(\[💳 Payments])
 
-
-
-&nbsp;   %% === Connections (Hierarchy) ===
-
-&nbsp;   GC --> SCR2
-
-&nbsp;   GC --> SCR3
-
-&nbsp;   GC --> SCR4
-
-&nbsp;   GC --> SCR5
-
-&nbsp;   GC --> SCR6
-
-&nbsp;   GC --> SCR7
-
-&nbsp;   GC --> SCR8
-
-&nbsp;   GC --> SCR9
-
-&nbsp;   GC --> SCR10
+      SCR10(\[📰 Blog])
 
 
 
-&nbsp;   SUP --> SCR4
+      %% === Level 2 - Subscreens / Components ===
 
-&nbsp;   SUP --> SCR5
+      subgraph Subscreens \[ ]
 
-&nbsp;   SUP --> SCR6
+          direction TB
+
+          SUB1(\[🧾 Order Details ])
+
+          SUB2(\[📝 New Order Form ])
+
+          SUB3(\[📬 Message Thread ])
+
+          SUB4(\[⚙️ Edit Profile ])
+
+          SUB5(\[🏗️ Supplier Details ])
+
+      end
+
+  end
 
 
 
-&nbsp;   SCR3 --> SUB1
+  %% === Connections (Hierarchy) ===
 
-&nbsp;   SCR3 --> SUB2
+  GC --> SCR2
 
-&nbsp;   SCR5 --> SUB3
+  GC --> SCR3
 
-&nbsp;   SCR6 --> SUB4
+  GC --> SCR4
 
-&nbsp;   SCR4 --> SUB5
+  GC --> SCR5
+
+  GC --> SCR6
+
+  GC --> SCR7
+
+  GC --> SCR8
+
+  GC --> SCR9
+
+  GC --> SCR10
+
+
+
+  SUP --> SCR4
+
+  SUP --> SCR5
+
+  SUP --> SCR6
+
+
+
+  SCR3 --> SUB1
+
+  SCR3 --> SUB2
+
+  SCR5 --> SUB3
+
+  SCR6 --> SUB4
+
+  SCR4 --> SUB5
 
