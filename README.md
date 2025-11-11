@@ -1,90 +1,64 @@
-# ```mermaid
+graph TD
 
-# graph TD
+&nbsp;   %% === Root ===
 
-# &nbsp;   %% Root
+&nbsp;   A\[🏠 Homepage 🔹 MVP]
 
-# &nbsp;   A\[Homepage]:::p1
 
-# 
 
-# &nbsp;   %% Level 1
+&nbsp;   %% === Level 1 Pages ===
 
-# &nbsp;   B\[About Us]:::p3
+&nbsp;   B\[ℹ️ About Us 🟡 MVP+]
 
-# &nbsp;   C\[Services]:::p2
+&nbsp;   C\[🧰 Services 🔹 MVP]
 
-# &nbsp;   D\[Blog]:::p4
+&nbsp;   D\[📰 Blog ⚪ Full]
 
-# &nbsp;   E\[Contact]:::p2
+&nbsp;   E\[📞 Contact 🔹 MVP]
 
-# 
 
-# &nbsp;   %% Level 2
 
-# &nbsp;   F\[Our Team]:::p3
+&nbsp;   %% === Level 2 Pages ===
 
-# &nbsp;   G\[Our History]:::p3
+&nbsp;   F\[👥 Our Team 🟡 MVP+]
 
-# &nbsp;   H\[Service 1]:::p2
+&nbsp;   G\[📜 Our History ⚪ Full]
 
-# &nbsp;   I\[Service 2]:::p2
+&nbsp;   H\[⚙️ Service 1 🔹 MVP]
 
-# &nbsp;   J\[Service 3]:::p2
+&nbsp;   I\[⚙️ Service 2 🔹 MVP]
 
-# &nbsp;   K\[Map \& Directions]:::p2
+&nbsp;   J\[⚙️ Service 3 🟡 MVP+]
 
-# &nbsp;   L\[Contact Form]:::p1
+&nbsp;   K\[🗺️ Map \& Directions 🔹 MVP]
 
-# 
+&nbsp;   L\[📩 Contact Form 🔹 MVP]
 
-# &nbsp;   %% Connections
 
-# &nbsp;   A --> B
 
-# &nbsp;   A --> C
+&nbsp;   %% === Connections ===
 
-# &nbsp;   A --> D
+&nbsp;   A --> B
 
-# &nbsp;   A --> E
+&nbsp;   A --> C
 
-# 
+&nbsp;   A --> D
 
-# &nbsp;   B --> F
+&nbsp;   A --> E
 
-# &nbsp;   B --> G
 
-# &nbsp;   C --> H
 
-# &nbsp;   C --> I
+&nbsp;   B --> F
 
-# &nbsp;   C --> J
+&nbsp;   B --> G
 
-# &nbsp;   E --> K
+&nbsp;   C --> H
 
-# &nbsp;   E --> L
+&nbsp;   C --> I
 
-# 
+&nbsp;   C --> J
 
-# &nbsp;   %% Priority Colors - VITA MVP Implementation Roadmap
+&nbsp;   E --> K
 
-# &nbsp;   classDef p1 fill:#28a745,stroke:#155724,stroke-width:4px,color:#fff,font-weight:bold
-
-# &nbsp;   classDef p2 fill:#ffc107,stroke:#e0a800,stroke-width:3px,color:#212529
-
-# &nbsp;   classDef p3 fill:#d63384,stroke:#b21f66,stroke-width:2px,color:#fff
-
-# &nbsp;   classDef p4 fill:#6c757d,stroke:#495057,stroke-width:1px,color:#fff
-
-# 
-
-# &nbsp;   %% Apply priorities
-
-# &nbsp;   class A,L p1
-
-# &nbsp;   class C,E,H,I,J,K p2
-
-# &nbsp;   class B,F,G p3
-
-# &nbsp;   class D p4
+&nbsp;   E --> L
 
