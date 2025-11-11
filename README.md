@@ -1,64 +1,106 @@
+```mermaid
+
 graph TD
 
-&nbsp;   %% === Root ===
+&nbsp;   %% === User Roles ===
 
-&nbsp;   A\[🏠 Homepage 🔹 MVP]
+&nbsp;   GC(\[General Contractor 👷])
 
-
-
-&nbsp;   %% === Level 1 Pages ===
-
-&nbsp;   B\[ℹ️ About Us 🟡 MVP+]
-
-&nbsp;   C\[🧰 Services 🔹 MVP]
-
-&nbsp;   D\[📰 Blog ⚪ Full]
-
-&nbsp;   E\[📞 Contact 🔹 MVP]
+&nbsp;   SUP(\[Supplier 🏭])
 
 
 
-&nbsp;   %% === Level 2 Pages ===
+&nbsp;   %% === System Boundary ===
 
-&nbsp;   F\[👥 Our Team 🟡 MVP+]
+&nbsp;   subgraph System \[🌐 VITA Platform]
 
-&nbsp;   G\[📜 Our History ⚪ Full]
-
-&nbsp;   H\[⚙️ Service 1 🔹 MVP]
-
-&nbsp;   I\[⚙️ Service 2 🔹 MVP]
-
-&nbsp;   J\[⚙️ Service 3 🟡 MVP+]
-
-&nbsp;   K\[🗺️ Map \& Directions 🔹 MVP]
-
-&nbsp;   L\[📩 Contact Form 🔹 MVP]
+&nbsp;       direction TB
 
 
 
-&nbsp;   %% === Connections ===
+&nbsp;       %% === Level 1 - Core Screens ===
 
-&nbsp;   A --> B
+&nbsp;       SCR1(\[🏠 Homepage])
 
-&nbsp;   A --> C
+&nbsp;       SCR2(\[🔐 Login / Register])
 
-&nbsp;   A --> D
+&nbsp;       SCR3(\[📦 Orders Dashboard])
 
-&nbsp;   A --> E
+&nbsp;       SCR4(\[🔎 Supplier Directory])
+
+&nbsp;       SCR5(\[💬 Messaging ])
+
+&nbsp;       SCR6(\[👤 Profile ])
+
+&nbsp;       SCR7(\[🔔 Notifications ])
+
+&nbsp;       SCR8(\[📊 Reports])
+
+&nbsp;       SCR9(\[💳 Payments])
+
+&nbsp;       SCR10(\[📰 Blog])
 
 
 
-&nbsp;   B --> F
+&nbsp;       %% === Level 2 - Subscreens / Components ===
 
-&nbsp;   B --> G
+&nbsp;       subgraph Subscreens \[ ]
 
-&nbsp;   C --> H
+&nbsp;           direction TB
 
-&nbsp;   C --> I
+&nbsp;           SUB1(\[🧾 Order Details ])
 
-&nbsp;   C --> J
+&nbsp;           SUB2(\[📝 New Order Form ])
 
-&nbsp;   E --> K
+&nbsp;           SUB3(\[📬 Message Thread ])
 
-&nbsp;   E --> L
+&nbsp;           SUB4(\[⚙️ Edit Profile ])
+
+&nbsp;           SUB5(\[🏗️ Supplier Details ])
+
+&nbsp;       end
+
+&nbsp;   end
+
+
+
+&nbsp;   %% === Connections (Hierarchy) ===
+
+&nbsp;   GC --> SCR2
+
+&nbsp;   GC --> SCR3
+
+&nbsp;   GC --> SCR4
+
+&nbsp;   GC --> SCR5
+
+&nbsp;   GC --> SCR6
+
+&nbsp;   GC --> SCR7
+
+&nbsp;   GC --> SCR8
+
+&nbsp;   GC --> SCR9
+
+&nbsp;   GC --> SCR10
+
+
+
+&nbsp;   SUP --> SCR4
+
+&nbsp;   SUP --> SCR5
+
+&nbsp;   SUP --> SCR6
+
+
+
+&nbsp;   SCR3 --> SUB1
+
+&nbsp;   SCR3 --> SUB2
+
+&nbsp;   SCR5 --> SUB3
+
+&nbsp;   SCR6 --> SUB4
+
+&nbsp;   SCR4 --> SUB5
 
