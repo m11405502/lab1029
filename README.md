@@ -19,6 +19,7 @@ graph TD
         SCR8([📊 Reports])
         SCR9([💳 Payments])
         SCR10([📰 Blog])
+        SCR11([🏗️ Projects Dashboard])
 
         %% === Level 2 - Subscreens / Components ===
         subgraph Subscreens [ ]
@@ -28,6 +29,8 @@ graph TD
             SUB3([📬 Message Thread ])
             SUB4([⚙️ Edit Profile ])
             SUB5([🏗️ Supplier Details ])
+            SUB6([📋 Project Details])
+            SUB7([🔩 Manage Materials])
         end
     end
 
@@ -41,13 +44,20 @@ graph TD
     GC --> SCR8
     GC --> SCR9
     GC --> SCR10
+    GC --> SCR11
 
+    SUP --> SCR2
+    SUP --> SCR3
     SUP --> SCR4
     SUP --> SCR5
     SUP --> SCR6
+    SUP --> SCR7
+    SUP --> SCR9
 
     SCR3 --> SUB1
     SCR3 --> SUB2
     SCR5 --> SUB3
     SCR6 --> SUB4
     SCR4 --> SUB5
+    SCR11 --> SUB6
+    SCR6 --> SUB7
